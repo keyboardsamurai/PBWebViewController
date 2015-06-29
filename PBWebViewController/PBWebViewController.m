@@ -25,6 +25,8 @@
 
 @implementation PBWebViewController
 
+@property(nonatomic) PBWebViewControllerDelegate *delegate;
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -86,6 +88,9 @@
 {
     [super viewWillAppear:animated];
     self.webView.delegate = self;
+    if(self.delegate){
+        [self.delegate didInitializeWebView:self.webView];
+    }
     if (self.URL) {
         [self load];
     }

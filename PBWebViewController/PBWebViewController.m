@@ -276,6 +276,11 @@
     [self finishLoad];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return YES;
+}
+
+
 #pragma mark - Popover controller delegate
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController

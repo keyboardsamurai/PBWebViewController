@@ -25,7 +25,6 @@
 
 @implementation PBWebViewController
 
-@property(nonatomic) PBWebViewControllerDelegate *delegate;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
